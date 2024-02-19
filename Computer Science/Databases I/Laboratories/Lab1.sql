@@ -44,7 +44,6 @@ SELECT ProductName, UnitPrice FROM Products WHERE UnitPrice >= 10 AND UnitPrice 
 /* Exercise 5 */
 /* 1. We are looking for information about products with prices less than 10 or greater than 20 */
 SELECT * FROM Products WHERE UnitPrice < 10 OR UnitPrice > 20
-
 /* 2. Select the names and prices of the unit priced products between 20.00 and 30.00 */
 SELECT ProductName, UnitPrice FROM Products WHERE UnitPrice BETWEEN 20.00 AND 30.00
 
@@ -59,10 +58,8 @@ SELECT OrderID, OrderDate, CustomerID FROM Orders WHERE (ShippedDate IS NULL OR 
 /* Exercise 8 */
 /* 1. Select the names and countries of all customers, sort the results by country, sort company names within a given country alphabetically SQL – basic commands */
 SELECT CompanyName, Country FROM Customers ORDER BY Country, CompanyName ASC
-
 /* 2. Select product information (group, name, price), Sort products by groups and in groups descending by price */
 SELECT CategoryName, ProductName, UnitPrice FROM Categories, Products ORDER BY CategoryName, UnitPrice DESC
-
 /* 3. Select the names and countries of all customers you have based in Great Britain (UK) or Italy (Italy), sort the results as in point 1 */
 SELECT CompanyName, Country FROM Customers WHERE Country = 'UK' OR Country = 'Italy' ORDER BY Country, CompanyName ASC
 
